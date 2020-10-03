@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+https://feedback-one.vercel.app/
 
 ## Getting Started
 
-First, run the development server:
+First create .env.local with the environment variables and create an account in vercel and firebase.
+
+install dependencies and run the development server:
 
 ```bash
 npm run dev
@@ -11,8 +13,6 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 ## Environment Variables
 
@@ -26,12 +26,16 @@ FIREBASE_CLIENT_EMAIL=
 
 ## Built Using
 
-Next.js
-Vercel
-Firebase
-Chakra UI
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Vercel](https://vercel.com/)
+- [Firebase](http://firebase.google.com/)
+- [Chakra UI](https://chakra-ui.com/)
+- [SWR](https://swr.vercel.app/)
 
 ## Learn More
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 To learn more about Next.js, take a look at the following resources:
 
