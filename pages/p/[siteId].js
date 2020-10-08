@@ -15,7 +15,7 @@ export async function getStaticProps(context) {
     props: {
       initialFeedback: feedback
     },
-    unstable_revalidate: 1 //we allow next.js to re-render existing pages when request comes in
+    revalidate: 1 //we allow next.js to re-render existing pages when request comes in
   };
 }
 
