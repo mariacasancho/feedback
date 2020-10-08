@@ -32,6 +32,7 @@ FIREBASE_CLIENT_EMAIL=
 - [Firebase](http://firebase.google.com/)
 - [Chakra UI](https://chakra-ui.com/)
 - [SWR](https://swr.vercel.app/)
+- [Js-cookie](https://github.com/js-cookie/js-cookie)
 
 ## Learn More
 

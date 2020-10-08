@@ -14,7 +14,8 @@ export async function getStaticProps(context) {
   return {
     props: {
       initialFeedback: feedback
-    }
+    },
+    unstable_revalidate: 1 //we allow next.js to re-render existing pages when request comes in
   };
 }
 
@@ -40,7 +41,6 @@ const FeedbackPage = ({ initialFeedback }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(auth.user);
 
     const newFeedback = {
       author: auth.user.name,

@@ -10,17 +10,16 @@ import SiteTable from '@/components/SiteTable';
 import fetcher from '@/utils/fetcher';
 
 const Dashboard = () => {
-  const auth = useAuth();
-  const { data, error } = useSWR('/api/sites', fetcher);
+  const { user } = useAuth();
+  const { data, error } = useSWR(user ? ['/api/sites', user.token] : null, fetcher);
 
-  console.log(data, error);
-  if (!auth.user) {
+  if (!data) {
     return <SiteTableSkeleton />;
   }
 
   return (
     <DashboardShell>
-      {data?.sites ? <SiteTable sites={data.sites} /> : <EmptyState />};
+      {data ?.sites ? <SiteTable sites={data.sites} /> : <EmptyState />};
     </DashboardShell>
   );
 };
