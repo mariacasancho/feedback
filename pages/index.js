@@ -11,8 +11,19 @@ export default function Home() {
       align="center"
       justify="center"
       h="100vh"
+      maxW="400px"
+      margin="0 auto"
     >
       <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (document.cookie && document.cookie.includes('fast-feedback-auth')) {
+                window.location.href = "/dashboard"
+              }
+            `
+          }}
+        />
         <title>Feedback</title>
       </Head>
 
@@ -25,10 +36,10 @@ export default function Home() {
           View dashboard
         </Button>
       ) : (
-        <Button mt={4} size="sm" onClick={(e) => auth.signinWithGithub()}>
-          Sign In
+          <Button mt={4} size="sm" onClick={(e) => auth.signinWithGithub()}>
+            Sign In
         </Button>
-      )}
+        )}
     </Flex>
   );
 }
