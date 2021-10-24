@@ -12,6 +12,7 @@ const SiteTable = ({ sites }) => {
           <Th>Name</Th>
           <Th>Site Link</Th>
           <Th>Feedback Link</Th>
+          <Th>Description</Th>
           <Th>Date Added</Th>
           <Th>{''}</Th>
         </Tr>
@@ -30,6 +31,7 @@ const SiteTable = ({ sites }) => {
                 <Link>View Feedback</Link>
               </NextLink>
             </Td>
+            <Td>{site.description}</Td>
             <Td>{format(parseISO(site.createdAt), 'PPpp')}</Td>
           </Box>
         ))}

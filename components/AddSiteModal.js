@@ -25,11 +25,12 @@ const AddSiteModal = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { handleSubmit, register } = useForm();
 
-  const onCreateSite = ({ name, url }) => {
+  const onCreateSite = ({ name, description, url }) => {
     const newSite = {
       authorId: auth.user.uid,
       createdAt: new Date().toISOString(),
       name,
+      description,
       url
     };
 
@@ -90,6 +91,16 @@ const AddSiteModal = ({ children }) => {
                 name="url"
                 ref={register({
                   required: 'Required'
+                })}
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Description</FormLabel>
+              <Input
+                placeholder="Description"
+                name="description"
+                ref={register({
+                  required: false
                 })}
               />
             </FormControl>
